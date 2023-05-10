@@ -351,7 +351,7 @@ html{
 }
 .ratio .progress .progress-text .skill-box{
     width: 100%;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .ratio .progress .progress-text .skill-box p{
@@ -1238,6 +1238,8 @@ html{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    position: relative;
+    left: 50px;
   }
 
   .About .container .About-text h3{
@@ -1265,10 +1267,14 @@ html{
   }
   .Polices .sub-heading h1{
     width: 19rem;
+    position: relative;
+    left: 40px;
   }
   .Polices .sub-heading p{
     width: 18rem;
     font-size: 16px;
+    position: relative;
+    left: 40px;
   }
   .Polices .order{
     display: grid;
@@ -1279,11 +1285,13 @@ html{
   .order #accordion{
     width: 300px;
     position: relative;
-    right: 15px;
+    left: 17px;
   }
   .Polices .order .order-img img{
     width: 18rem;
     height: 18rem;
+    position: relative;
+    left: 17px;
   }
   .ratio .progress{
     display: grid;
@@ -1294,13 +1302,26 @@ html{
   .ratio .progress .progress-img img{
     width: 18rem;
     height: 18rem;
+    position: relative;
+    left: 15px;
   }
 
   .ratio .progress .progress-text h1{
     font-size: 21px;
+    position: relative;
+    left: 15px;
+    width: 20rem;
   }
   .ratio .progress .progress-text p{
     font-size: 18px;
+    position: relative;
+    left: 15px;
+    width: 20rem;
+  }
+  .ratio .progress .progress-text .skill-box{
+    width: 90%;
+    position: relative;
+    left: 7px;
   }
   .ratio .skill-main .skill-box p{
     font-size: 18px;
@@ -1365,6 +1386,8 @@ html{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    position: relative;
+    left: 45px;
     
   }
 
@@ -1454,14 +1477,14 @@ html{
   .FAQ .FAQ-text p{
     width: 19rem;
     position: relative;
-    right: 25px;
+    left: 20px;
     font-size: 18px;
   }
 
 
   .assign #accordion-1{
     position: relative;
-    right: 35%;
+    right: 40px;
     width: 350px;
   
   }
