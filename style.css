@@ -26,14 +26,30 @@
     --main-font-family:'Poppins', sans-serif;
 }
 
+
 .align{
     max-width: 1200px;
     margin: auto;
-    padding: 0, 3rem;
+    padding: 0 3rem;
 }
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: 8rem;
+    scroll-padding-top: 10rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body{
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  
 }
 
 .header{
@@ -325,10 +341,9 @@ html{
 }
 
 .ratio .progress{
-    display:grid;
-    grid-template-columns: auto auto;
+    display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 4rem;
     margin-top: 10%;
 }
 
@@ -352,6 +367,7 @@ html{
 .ratio .progress .progress-text .skill-box{
     width: 100%;
     margin: 20px 0;
+    
 }
 
 .ratio .progress .progress-text .skill-box p{
@@ -477,7 +493,7 @@ html{
 }
 
 .Portfolio{
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .Portfolio .Portfolio-text{
@@ -1098,35 +1114,36 @@ html{
     color:var(--main-color)
 }
 
-.footer .sub-container .sub-1{
+.footer .sub-container .sub .sub-1{
     display: flex;
     flex-direction: row;
   
     
 }
-.footer .sub-container .sub-1 p{
+.footer .sub-container .sub .sub-1 p{
     color:  var(--primary-color);
     font-size: var(--p-font-size);
 
 }
 
-.footer .sub-container .sub-2 p{
-    color: var(--primary-color);
-    font-size: var(--p-font-size);
-}
-
-.footer .sub-container .sub-2{
+.footer .sub-container .sub .sub-2{
     display: flex;
     flex-direction: row;
    
 }
+.footer .sub-container .sub .sub-2 p{
+    color: var(--primary-color);
+    font-size: var(--p-font-size);
+}
 
-.footer .sub-container .sub-align{
+
+
+.footer .sub-container .sub .sub-align{
     position: relative;
     bottom: 40px;
 }
 
-.footer .sub-container .sub-align p{
+.footer .sub-container .sub .sub-align p{
     color: var(--primary-color);
     font-size: var(--p-font-size);
   
@@ -1134,17 +1151,28 @@ html{
 
 
 
-.footer .sub-container .sub-align-1 p{
+.footer .sub-container .sub .sub-align-1 h1{
+    width: 22rem;
+    position: relative;
+    bottom: 20px;
+}
+
+
+.footer .sub-container .sub .sub-align-1 p{
     color:  var(--primary-color);
     font-size: var(--p-font-size);
-    margin-bottom: 2.1rem;
-    width: 22rem;
+    position: relative;
+    bottom: 15px;
+    width: 20rem;
 
 }
 
-.footer .sub-container .sub-align-1 i{
-    font-size: 30px;
+.footer .sub-container .sub .sub-align-1 i{
+    font-size: 25px;
+    position: relative;
+    bottom: 10px;
     border-radius: 50%;
+    background-color: #f0f8ff9c;
     padding: 5px;
 }
 
@@ -1164,8 +1192,7 @@ html{
     color: var(--primary-color);
 }
 
-@media only screen and  (min-width:360px) and (max-width:437px){
-   
+@media screen and  (min-width:360px) and (max-width:440px){
 
   .header .flex .logo{
     font-size: 20px;
@@ -1174,8 +1201,8 @@ html{
   }
 
   .header .flex .navbar a{
-   position: relative;
-   right: 30px;
+    position: relative;
+    right: 25px;
   }
 
   .header .flex .button{
@@ -1238,43 +1265,42 @@ html{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
-    position: relative;
-    left: 50px;
+    
   }
 
   .About .container .About-text h3{
     width: 19rem;
     font-size: 20px;
     position: relative;
-    right: 20px;
+    right: 15px;
   }
 
   .About .container .About-text h4{
     width: 19rem;
     font-size: 20px;
     position: relative;
-    right: 20px;
+    right: 15px;
   }
   .About .container .About-word h3{
    width: 19rem;
    font-size: 20px;
    position: relative;
-   right: 20px;
+   right: 15px;
   }
   .About .container .About-button{
   position: relative;
    right: 20px;
   }
   .Polices .sub-heading h1{
-    width: 19rem;
+    width: 15rem;
     position: relative;
-    left: 40px;
+    left: 20px;
   }
   .Polices .sub-heading p{
     width: 18rem;
     font-size: 16px;
     position: relative;
-    left: 40px;
+    left: 20px;
   }
   .Polices .order{
     display: grid;
@@ -1285,54 +1311,55 @@ html{
   .order #accordion{
     width: 300px;
     position: relative;
-    left: 17px;
+    right: 20px;
   }
   .Polices .order .order-img img{
     width: 18rem;
     height: 18rem;
     position: relative;
-    left: 17px;
+    left: 10px;
   }
   .ratio .progress{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
   .ratio .progress .progress-img img{
-    width: 18rem;
-    height: 18rem;
+    width: 19rem;
+    height: 19rem;
     position: relative;
-    left: 15px;
+    left: 10px;
   }
 
   .ratio .progress .progress-text h1{
     font-size: 21px;
     position: relative;
-    left: 15px;
+    left: 20px;
     width: 20rem;
   }
   .ratio .progress .progress-text p{
     font-size: 18px;
     position: relative;
-    left: 15px;
+    left: 20px;
     width: 20rem;
   }
-  .ratio .progress .progress-text .skill-box{
-    width: 90%;
+
+  
+
+
+
+  .ratio .progress .progress-text .skill-box p:nth-child(2){
+  
     position: relative;
-    left: 7px;
-  }
-  .ratio .skill-main .skill-box p{
-    font-size: 18px;
+    bottom: 38px;
+    left: 85%;
   }
 
-  .ratio .skill-main .skill-box{
-    position: relative;
-    right: 25px;
-  }
+ 
+
   .Services .inner p{
-    width: 18rem;
+    width: 17rem;
     font-size: 16px;
   }
   .Services .card{
@@ -1343,7 +1370,7 @@ html{
   }
   .Services .card .card-text{
     position: relative;
-    left: 5px;
+    left: 10px;
     width: 19rem;
   }
   .call-to-action{
@@ -1372,8 +1399,8 @@ html{
 
   .Portfolio .Portfolio-text p{
     position: relative;
-    right: 25px;
-    width: 19rem;
+     left: 3px;
+    width: 17rem;
     font-size: 16px;
   }
 
@@ -1387,7 +1414,7 @@ html{
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
-    left: 45px;
+    left: 15px;
     
   }
 
@@ -1426,7 +1453,7 @@ html{
     width: 16rem;
 }
 .Team .Team-text p{
-    width: 19rem;
+    width: 18rem;
     font-size: 18px;
 }
   .Team .card-body{
@@ -1456,7 +1483,7 @@ html{
    font-size: 20px;
   }
   .Pricing .Pricing-text p{
-    width: 18rem;
+    width: 17rem;
     position: relative;
     right: 25px;
     font-size: 18px;
@@ -1470,22 +1497,20 @@ html{
   .Pricing .card-1 .card-2{
     position: relative;
     right: 50px;
-    width: 19rem;
-    height: 38rem;
+    width: 20rem;
+    height: 30rem;
   }
 
   .FAQ .FAQ-text p{
-    width: 19rem;
-    position: relative;
-    left: 20px;
+    width: 17rem;
     font-size: 18px;
   }
 
 
   .assign #accordion-1{
-    position: relative;
-    right: 40px;
     width: 350px;
+    position: relative;
+    right: 80px;
   
   }
 
@@ -1535,18 +1560,34 @@ html{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    position: relative;
+    left: 50px;
 }
 
 .footer .sub-container .sub h2{
     font-size: 20px;
 }
 
+.footer .sub-container .sub .sub-align p{
+    width: 15rem;
+}
+
 .footer .sub-container .sub p{
-    font-size: 18px;
+    font-size: 19px;
+}
+
+.footer .sub-container .sub .sub-align-1 h1{
+    width: 20rem;
+}
+
+.footer .sub-container .sub .sub-align-1 p{
+    width: 18rem;
 }
 
 .footer .credit .column p{
     font-size: 18px;
+    position: relative;
+    left: 15px;
 }
 }
 
@@ -1574,7 +1615,7 @@ html{
 }
 
 .Home .Home-img img{
-    width: 24rem;
+    width: 26rem;
 }
 .images{
     display: flex;
@@ -1593,64 +1634,77 @@ html{
   
 }
 .About .container .About-text h3{
-    width: 24rem;
+    width: 23rem;
     position: relative;
-    left: 45px;
+    left: 30px;
 } 
 .About .container .About-text h4{
-    width: 24rem;
+    width: 23rem;
     position: relative;
-    left: 45px;
+    left: 30px;
 }
 .About .container .About-word h3{
-    width: 24rem;
+    width: 23rem;
     position: relative;
-    left: 45px;
+    left: 30px;
 }
 
 .About .container .About-button{
     position: relative;
-    left: 45px;
+    left: 30px;
 
 }
 .Polices .sub-heading{
     width: 24rem;
     position: relative;
-    left: 45px;
+    left: 25px;
 }
 .Polices .order{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
-    left: 45px;
+    left: 25px;
 }
 .order  #accordion{
     width: 400px;
     position: relative;
-    right: 20px;
+    right: 10px;
 }
 .Polices .order .order-img img{
-    width: 24rem;
+    width: 22rem;
 }
 .ratio .progress{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     
 }
 
+
 .ratio .progress .progress-img img{
-    width: 24rem;
+    width: 22rem;
     position: relative;
     left: 15px;
 }
+
+  .ratio .progress .progress-text .skill-box {
+    width: 90%;
+    position: relative;
+    left: 15px;
+  }
+
 .Services .card{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
     left: 10px;
+}
+.call-to-action {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 .call-to-action .box-container{
     display: grid;
@@ -1669,7 +1723,28 @@ html{
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
-    left: 45px;
+    left: 25px;
+}
+.Portfolio .grid-container .app-container .app-2 img{
+    width: 23rem;
+}
+.Portfolio .grid-container .app-container .app-3 img{
+    width: 23rem;
+}
+.Portfolio .grid-container .app-container .app-4 img{
+    width: 23rem;
+}
+.Portfolio .grid-container .web-container .web-5 img{
+    width: 22rem;
+}
+.Portfolio .grid-container .web-container .web-6 img{
+    width: 22rem;
+}
+.Portfolio .grid-container .web-container .web-7 img{
+    width: 22rem;
+}
+.Portfolio .grid-container .web-container .web-8 img{
+    width: 22rem;
 }
 .Team .card-body{
    display: grid;
@@ -1697,12 +1772,12 @@ html{
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
-    right: 20px;
+    left:15px ;
 }
 .assign #accordion-1{
     width: 500px;
     position: relative;
-    right: 25%;
+    right: 30%;
 }
 .Contact .sector{
  display: flex;
@@ -1713,13 +1788,12 @@ html{
 .Contact .sector .card-4{
     width: 27rem;
     position: relative;
-    right: 25px;
+    left: 10px;
 }
 
 .Contact .sector .outer{
-    width: 27rem;
     position: relative;
-    right: 25px;
+    left: 10px;
 }
 .Contact .sector .outer .outer-align{
     width: 27rem;
@@ -1728,6 +1802,8 @@ html{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    position: relative;
+    left: 85px;
 }
 .footer .sub-container .sub h1{
     font-size: 21px;
@@ -1742,247 +1818,11 @@ html{
 .footer .sub-container .sub .sub-align-1 p{
     width: 25rem;
 }
+
+
 }
  
-@media (min-width:855px) and (max-width:940px){
-.header .flex .navbar a{
-    margin-left: 2rem;
-}
-.Home .Home-img img{
-    width: 28rem;
-}
- .About .container{
-    display: grid;
-    grid-template-columns: 30rem 30rem;
-    gap: 1rem;
- }
- .About .container .About-text h3{
-    width: 20rem;
-}
-.About .container .About-word h3{
-    width: 25rem;
-}
- 
-    .order #accordion{
-    position: relative;
-    right: 10px;
-    width: 400px;
-}
 
-.Polices .order .order-img img{
-    width: 28rem;
-    height: 40rem;
-    position: relative;
-    right: 10px;
-}
-
-.Services .card{
-    display: flex;
-
-}
-.Services .card .card-text{
-    width: 25rem;
-    height: 28rem;
-}
-.call-to-action {
-    background-size: cover;
-}
-
-.call-to-action .box-container{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.call-to-action .box-container .box p{
-    width: 20rem;
-}
-.Portfolio .grid-container{
-    display: grid;
-    grid-template-columns: 19rem 19rem 19rem;
-    gap:1.5rem;
-    align-items: center;
-    position: relative;
-    right: 30px;
-}
-
-
-
-
-.Portfolio .grid-container .menu-container .menu img{
-    width: 19rem;
-    height: 38rem;
-    margin-bottom: 2rem;
-
-}
-
-.Portfolio .grid-container .menu-container .menu-1 img{
-    width: 19rem;
-    height: 46rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .app-container .app-2 img{
-    width: 18rem;
-    height: 22rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .app-container .app-3 img{
-    width: 18rem;
-    height: 33rem;
-    margin-bottom: 2rem;
-}
-
-
-.Portfolio .grid-container .app-container .app-4 img{
-    width: 18rem;
-    height: 22rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .web-container .web-5 img{
-    width:14rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .web-container .web-6 img{
-    width:14rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-
-.Portfolio .grid-container .web-container .web-7 img{
-    width:14rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-
-.Portfolio .grid-container .web-container .web-8 img{
-    width:14rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-
-.Team .card-body{
-    display: grid;
-    grid-template-columns: 25rem 25rem;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.Team .card-body .card-box{
-    width:25rem;
-    position: relative;
-    right: 10%;
-}
-
-    
-
-
-.Team .card-body .card-box img{
-    width: 10rem;
-}
-
-.Team .card-body .card-box h1{
-    font-size: 20px;
-}
-
-.Team .card-body .card-box p{
-  font-size: 17px;
-  width: 10rem;
- 
-
-
-
-}
-
-
-.Team .card-body .card-box i{
-    font-size: 15px;
-}
-
-.Pricing .card-1{
-    display: grid;
-    grid-template-columns:30% 30 30%;
-    gap: 1rem;
-}
-
-.Pricing .card-1 .card-2{
-    width:15rem;
-    height: 39rem;
-}
-.Contact .sector{
-    display: flex;
-    align-items: center;
-    gap: 2,5rem;
-}
-
-.Contact .sector .card-4 .card-5{
-    width: 22rem;
-}
-
-.Contact .sector .outer .outer-align{
-    width: 22rem;
-}
-
-.footer .sub-container{
-  display: grid;
-  grid-template-columns:auto auto auto auto;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footer .sub-container .sub{
-    width: 15rem;
-    position: relative;
-    right: 20px;
-    
-}
-
-.footer .sub-container .sub .sub-align{
-    position: relative;
-      bottom: 25px;
-}
-
-
-.footer .sub-container .sub .sub-1{
-    display: flex;
-    width: 18rem;
-}
-
-.footer .sub-container .sub .sub-1 p{
-   font-size: 16px;
-
-}
-
-.footer .sub-container .sub .sub-2 p{
-    font-size: 16px;
-}
-.footer .sub-container .sub .sub-align-1{
-    position: relative;
-    top: 15px;
-    right: 10px;
-    width: 15rem;
-}
-
-.footer .sub-container .sub .sub-align-1 p{
-    font-size: 16px;
-    width: 10rem;
-}
-
-
-.footer .sub-container .sub .sub-align-1 i{
-    position: relative;
-    right: 20px;
-    padding: 3px;
-}
-
-
-}
 
 @media (min-width:950px) and (max-width:1025px){
 
@@ -1999,7 +1839,7 @@ html{
         width: 20rem;
     }
     .About .container .About-word h3{
-        width: 20rem;
+        width: 25rem;
     }
 
     .order #accordion{
@@ -2008,10 +1848,21 @@ html{
     }
 
     .Polices .order .order-img img{
-        width: 19rem;
-        height: 40rem;
+        width: 20rem;
+        height: 25rem;
         position: relative;
-        right: 10px;
+        right: 30px;
+    }
+
+    .ratio .progress .progress-img img{
+        width: 24rem;
+        height: 30rem;
+    }
+
+
+    .Services .card .card-text{
+        width: 27rem;
+
     }
 
     .Portfolio .grid-container{
@@ -2020,7 +1871,7 @@ html{
         gap:1.5rem;
         align-items: center;
         position: relative;
-        right: 30px;
+        right: 25px;
     }
 
 
@@ -2088,26 +1939,36 @@ html{
         grid-template-columns: 28rem 28rem;
         align-items: center;
         gap: 1.5rem;
+        position: relative;
+        right: 20px;
     }
 
     .Team .card-body .card-box{
-        width:27rem
+        width:28rem
     }
 
     .Pricing .card-1{
         display: grid;
-        grid-template-columns:30% 30 30%;
+        grid-template-columns:35% 35 35%;
         gap: 1rem;
+        position: relative;
+        right: 40px;
     }
 
     .Pricing .card-1 .card-2{
-        width:17rem;
-        height: 39rem;
+        width:18rem;
+        height:40rem;
+        padding: 10px 15px;
+    }
+
+    .assign #accordion-1{
+        position: relative;
+        right: 30px;
     }
     .Contact .sector{
         display: flex;
         align-items: center;
-        gap: 2,5rem;
+        gap: 2.5rem;
     }
 
     .Contact .sector .card-4 .card-5{
@@ -2115,7 +1976,7 @@ html{
     }
 
     .Contact .sector .outer .outer-align{
-        width: 25rem;
+        width: 27rem;
     }
 
     .footer .sub-container{
@@ -2127,11 +1988,12 @@ html{
 
     .footer .sub-container .sub{
         width: 15rem;
+    
     }
 
     .footer .sub-container .sub .sub-align{
         position: relative;
-          bottom: 10px;
+          bottom: 24px;
     }
    
 
@@ -2142,6 +2004,7 @@ html{
 
     .footer .sub-container .sub .sub-1 p{
        font-size: 16px;
+
     
     }
 
@@ -2149,12 +2012,34 @@ html{
         font-size: 16px;
     }
 
+    .footer .sub .sub-plot{
+        position: relative;
+        right: 60px;
+    }
+
+    .footer .sub-container .sub .sub-align-1{
+        position: relative;
+        right: 70px;
+    }
+
+    .footer .sub-container .sub .sub-align-1 h1{
+        width: 20rem;
+        position: relative;
+        bottom: 1px;
+        right: 17px;
+       
+    }
+
     .footer .sub-container .sub .sub-align-1 p{
-        width:10rem;
+        width:15rem;
+        font-size:17px;
+        position: relative;
+        top: 5px;
+    
     }
     .footer .sub-container .sub .sub-align-1 i{
-        position: relative;
-        right: 30px;
+       position: relative;
+       top: 10px;
         padding: 3px;
     }
 }
@@ -2184,8 +2069,30 @@ html{
     width: 28rem;
 }
 
+.Portfolio .grid-container{
+    position: relative;
+    right: 20px;
+}
+.Team .card-body{
+    display: grid;
+    grid-template-columns: 35rem 35rem;
+}
+.Team .card-body .card-box{
+    width: 30rem;
+}
+
 .footer .sub-container .sub{
     width: 15rem;
+}
+
+.footer .sub-container .sub-align h1{
+    position: relative;
+    top: 15px;
+}
+
+.footer .sub-container .sub-align p{
+    position: relative;
+    top: 15px;
 }
 
 .footer .sub-container .sub-1{
@@ -2193,8 +2100,24 @@ html{
     width: 20rem;
 }
 
+.footer .sub-container .sub .sub-align-1{
+    position: relative;
+    right: 25px;
+} 
+
+.footer .sub-container .sub .sub-align-1 h1{
+    position: relative;
+    bottom: 7px;
+}
+
 .footer .sub-container .sub .sub-align-1 p{
-    width: 15rem;
+    width: 20rem;
+    position: relative;
+    top: 1px;
+}
+.footer .sub-container .sub .sub-align-1 i{
+    position: relative;
+    top: 10px;
 }
 }
 
