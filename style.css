@@ -1140,7 +1140,7 @@ body{
 
 .footer .sub-container .sub .sub-align{
     position: relative;
-    bottom: 40px;
+    bottom: 35px;
 }
 
 .footer .sub-container .sub .sub-align p{
@@ -1154,7 +1154,7 @@ body{
 .footer .sub-container .sub .sub-align-1 h1{
     width: 22rem;
     position: relative;
-    bottom: 20px;
+    bottom: 8px;
 }
 
 
@@ -1162,7 +1162,7 @@ body{
     color:  var(--primary-color);
     font-size: var(--p-font-size);
     position: relative;
-    bottom: 15px;
+    top: 1px;
     width: 20rem;
 
 }
@@ -1170,7 +1170,7 @@ body{
 .footer .sub-container .sub .sub-align-1 i{
     font-size: 25px;
     position: relative;
-    bottom: 10px;
+    top: 10px;
     border-radius: 50%;
     background-color: #f0f8ff9c;
     padding: 5px;
@@ -1194,6 +1194,7 @@ body{
 
 @media screen and  (min-width:360px) and (max-width:440px){
 
+
   .header .flex .logo{
     font-size: 20px;
     position: relative;
@@ -1202,7 +1203,8 @@ body{
 
   .header .flex .navbar a{
     position: relative;
-    right: 25px;
+    right: 20px;
+    display: grid;
   }
 
   .header .flex .button{
@@ -1258,9 +1260,7 @@ body{
     width: 15rem;
    
   }
-  .About .About-text p{
-    font-size: 18px;
-  }
+ 
   .About .container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -1272,24 +1272,24 @@ body{
     width: 19rem;
     font-size: 20px;
     position: relative;
-    right: 15px;
+    right: 5px;
   }
 
   .About .container .About-text h4{
     width: 19rem;
     font-size: 20px;
     position: relative;
-    right: 15px;
+    right: 10px;
   }
   .About .container .About-word h3{
    width: 19rem;
    font-size: 20px;
    position: relative;
-   right: 15px;
+   right: 10px;
   }
   .About .container .About-button{
   position: relative;
-   right: 20px;
+   right: 10px;
   }
   .Polices .sub-heading h1{
     width: 15rem;
@@ -1311,13 +1311,11 @@ body{
   .order #accordion{
     width: 300px;
     position: relative;
-    right: 20px;
+    right: 10px;
   }
   .Polices .order .order-img img{
-    width: 18rem;
-    height: 18rem;
-    position: relative;
-    left: 10px;
+    width: 19rem;
+    height: 19rem;
   }
   .ratio .progress{
     display: flex;
@@ -1496,7 +1494,7 @@ body{
 
   .Pricing .card-1 .card-2{
     position: relative;
-    right: 50px;
+    right: 55px;
     width: 20rem;
     height: 30rem;
   }
