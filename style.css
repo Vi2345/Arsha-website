@@ -21,8 +21,8 @@
     --h2-font-size:25px;
     --h3-font-size:23px;
     --h4-font-size:21px;
-    --p-font-size:18px;
-    --a-font-size:17px;
+    --p-font-size:19px;
+    --a-font-size:18px;
     --main-font-family:'Poppins', sans-serif;
 }
 
@@ -35,71 +35,70 @@
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 body{
-    scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;  
+    overflow-x: hidden;
+    font-family: var(--main-font-family);
 }
 
 .header{
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color:var(--main-color);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
     z-index: 2;
-}
-
-.header .flex{
-    display:flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: center;
-    text-align: center;
-    padding:1.5rem 2rem;
-}
-
- .header .flex .logo{
    
-    font-size:var(--h1-font-size);
+   
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-color);
+    line-height: 100px;
+    padding: 0 100px;
+
+}
+
+nav .logo{
+    float: left;
+}
+
+nav .logo h1{
+    font-size:40px;
+    font-weight: bold;
+    letter-spacing: 2px;
     color: var(--secondary-color);
-    text-transform: uppercase;
+    
 }
 
-
-.header .flex .navbar  a{
-    font-size:var(--a-font-size);
-    color:var(--secondary-color);
-    margin-left: 3.4rem;
- 
-
-
+nav ul{
+    float: right;
 }
-.header .flex .navbar i{
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    position: relative;
+    top: auto;
+    left: 15px;
     color: var(--secondary-color);
+    padding: 0px 20px;
+    font-size: var(--a-font-size);
 }
 
-.header .flex .navbar a:hover{
-    text-decoration: underline;
+nav ul li a:hover{
     color:#00ffff;
+    text-decoration: underline;
+    
 }
 
 
-
- .header .flex .button{
-   display: inline-block;
+  .button{
    border: 2px solid var(--third-color);
   color: var(--secondary-color);
   border-radius: 50px;
@@ -110,8 +109,22 @@ body{
   
 }
 
+.checkbtn{
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    color: var(--secondary-color);
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+
 .Home{
-    min-height: 30rem;
+    min-height: 45rem;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -120,6 +133,11 @@ body{
     padding: 1rem 2rem;
     
     
+}
+
+.Home .Home-text{
+    position: relative;
+    top: 30px;
 }
 
 .Home .Home-text h1{
@@ -163,14 +181,16 @@ body{
 
 .Home .Home-img img{
     width: 35rem;
-    height: 35rem;
+    height: 30rem;
+    position: relative;
+    top:85px;
 }
 
 
   .images{
     display:flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
    
   
 
@@ -412,8 +432,19 @@ body{
 .Services .inner h1{
     font-size: var(--h1-font-size);
     color: var(--main-color);
+    margin-bottom: 1rem;
   
 }
+ 
+.Services .inner h1::after{
+    content: "";
+    width:15%;
+    height: 3px;
+    display: block;
+    margin: auto;
+    background-color: var(--main-color);
+}
+
  .Services .inner p{
     font-size: var(--p-font-size);
     color: var(--primary-color);
@@ -641,7 +672,7 @@ body{
 .Team .card-body{
     position: relative;
     display: grid;
-    grid-template-columns: 34rem 34rem;
+    grid-template-columns: auto auto;
     align-items: center;
     gap: 2rem;
     margin-top: 5%;
@@ -650,9 +681,9 @@ body{
     position: relative;
     text-align: center;
     background-color: var(--secondary-color);
-    width: 28rem;
-    height: 30rem;
-    padding: 10px;
+    width: 32rem;
+    height: 32rem;
+   
    
 
 }
@@ -887,7 +918,12 @@ body{
      transition: max-height 0.5s;
      
  }
- 
+
+ .assign #accordion-1 li .part p{
+    padding: 15px 20px;
+    margin-left: 10%;
+
+ }
  .assign #accordion-1 li label i{
      font-size: 22px;
      color: var(--primary-color);
@@ -949,8 +985,8 @@ body{
 
  .Contact .sector{
     display: flex;
+    gap: 2.5rem;
     align-items: center;
-    gap: 4rem;
  }
 
    
@@ -966,6 +1002,7 @@ body{
     position: relative;
     background-color: var(--secondary-color);
     padding: 15px 20px;
+
    
  }
 
@@ -977,6 +1014,7 @@ body{
     border-radius: 50%;
     color: var(--main-color);
     background-color: #e6e6fa;
+  
 }
 .Contact .sector .card-4 .card-5 p{
     position: relative;
@@ -984,6 +1022,7 @@ body{
     font-size: var(--p-font-size);
     bottom: 50px;
     left: 65px;
+    
 
 }
 
@@ -1018,14 +1057,14 @@ body{
 
 .Contact .sector .outer .outer-align .outer-1 input{
     width: 100%;
-    padding: 1rem;
+    padding:1rem;
    
 }
 
 
 .Contact .sector .outer .outer-align .outer-1 textarea{
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .Contact .sector .outer .outer-align .text-center {
@@ -1154,7 +1193,7 @@ body{
 .footer .sub-container .sub .sub-align-1 h1{
     width: 22rem;
     position: relative;
-    bottom: 8px;
+    bottom: 1px;
 }
 
 
@@ -1179,6 +1218,7 @@ body{
 .credit{
   background-color: #f0f8ff9c ;
   padding: 2rem;
+  margin-top: 10%;
 }
 
 .credit .column{
@@ -1192,63 +1232,37 @@ body{
     color: var(--primary-color);
 }
 
-@media screen and  (min-width:360px) and (max-width:440px){
+@media screen and (max-width:480px)
+{
 
+nav ul li a{
+    line-height: 10px;
+}
 
-  .header .flex .logo{
-    font-size: 20px;
+.button{
+    padding:5px 10px;
     position: relative;
-    right: 10px;
-  }
-
-  .header .flex .navbar a{
-    position: relative;
-    right: 20px;
-    display: grid;
-  }
-
-  .header .flex .button{
-    display: inline-block;
-    padding: 5px 10px;
-    position: relative;
-   
-  
-   
-  }
+    bottom: 5px;
+}
   .Home{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
-
-
-   
   }
+
   
-  .Home .Home-text h1{
-    font-size: 1.5rem;
-    width: 18rem;
-    padding: 10px 15px;
-   
-  }
-  .Home .Home-text p{
-    font-size: 20px;
-    width: 18rem;
-    padding: 10px 15px ;
-  }
+ .Home .Home-text{
+    width: 24rem;
+    margin-top: 15%;
+ }
 
-  .Home .Home-img img{
-    width: 20rem;
-    height: 18rem;
-  }
+ .Home .Home-img img{
+    margin-top: 15%;
 
-  .Home .Home-text .Home-button{
-    position: relative;
-     right: 20px;
-  }
+ }
+ 
+  
 
-.Home .Home-text .text{
-    font-size: 16px;
-}
   .images{
     display: flex;
     flex-direction: column;
@@ -1269,38 +1283,32 @@ body{
   }
 
   .About .container .About-text h3{
-    width: 19rem;
-    font-size: 20px;
-    position: relative;
-    right: 5px;
+    width: 10rem;
   }
 
   .About .container .About-text h4{
-    width: 19rem;
-    font-size: 20px;
+    width: 25rem;
     position: relative;
-    right: 10px;
+    left: 10px;
   }
   .About .container .About-word h3{
-   width: 19rem;
-   font-size: 20px;
+   width: 24rem;
    position: relative;
-   right: 10px;
+   left: 10px;
   }
   .About .container .About-button{
   position: relative;
-   right: 10px;
+   left: 10px;
   }
   .Polices .sub-heading h1{
-    width: 15rem;
+    width: 24rem;
     position: relative;
-    left: 20px;
+    left: 15px;
   }
   .Polices .sub-heading p{
-    width: 18rem;
-    font-size: 16px;
+    width: 24rem;
     position: relative;
-    left: 20px;
+    left: 15px;
   }
   .Polices .order{
     display: grid;
@@ -1309,13 +1317,13 @@ body{
   }
 
   .order #accordion{
-    width: 300px;
+    width: 400px;
     position: relative;
-    right: 10px;
+     right: 10px;
   }
   .Polices .order .order-img img{
-    width: 19rem;
-    height: 19rem;
+    width: 25rem;
+
   }
   .ratio .progress{
     display: flex;
@@ -1324,23 +1332,16 @@ body{
   }
 
   .ratio .progress .progress-img img{
-    width: 19rem;
-    height: 19rem;
-    position: relative;
-    left: 10px;
+    width: 25rem;
+  
   }
 
   .ratio .progress .progress-text h1{
-    font-size: 21px;
-    position: relative;
-    left: 20px;
-    width: 20rem;
+
+    width: 25rem;
   }
   .ratio .progress .progress-text p{
-    font-size: 18px;
-    position: relative;
-    left: 20px;
-    width: 20rem;
+    width: 25rem;
   }
 
   
@@ -1355,10 +1356,16 @@ body{
   }
 
  
+  .Services .inner h1::after{
+    content: "";
+    width: 30%;
+    display: block;
+    margin: auto;
+    background-color: var(--main-color);
+}
 
   .Services .inner p{
-    width: 17rem;
-    font-size: 16px;
+    width: 25rem;
   }
   .Services .card{
     display: flex;
@@ -1368,8 +1375,8 @@ body{
   }
   .Services .card .card-text{
     position: relative;
-    left: 10px;
-    width: 19rem;
+    left: 7px;
+    width: 27rem;
   }
   .call-to-action{
     background-position: center;
@@ -1381,25 +1388,24 @@ body{
     align-items: center;
   }
 
- .call-to-action .box-container .box{
-    position: relative;
-    right: 20px;
+ .call-to-action .box-container .box h1{
+    font-size:var(--h2-font-size);
+    margin-bottom: 1rem;
  }
   .call-to-action .box-container .box p{
-    width: 19rem;
-    font-size: 18px;
+    width: 25rem;
+    
   }
-
-  .call-to-action .call-to-action-button{
-    position: relative;
-    right: 25px;
-  }
+ .Portfolio .Portfolio-text h1::after{
+    content: "";
+    width: 30%;
+    margin: auto;
+    display: block;
+    background-color: var(--main-color);
+ }
 
   .Portfolio .Portfolio-text p{
-    position: relative;
-     left: 3px;
-    width: 17rem;
-    font-size: 16px;
+    width: 25rem;
   }
 
   .Portfolio .Portfolio-text .layer .out{
@@ -1412,47 +1418,54 @@ body{
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
-    left: 15px;
+    left: 5px;
     
   }
 
   .Portfolio .grid-container .menu-container .menu img{
-    width: 16rem;
+    width: 25rem;
   }
 
   .Portfolio .grid-container .menu-container .menu-1 img{
-    width: 16rem;
+    width: 25rem;
   }
 
   .Portfolio .grid-container .app-container .app-2 img{
-    width: 16rem;
+    width: 24rem;
   }
 
   .Portfolio .grid-container .app-container .app-3 img{
-    width: 16rem;
+    width: 24rem;
   }
 
   .Portfolio .grid-container .app-container .app-4 img{
-    width: 16rem;
+    width: 24rem;
   }
 
   .Portfolio .grid-container .web-container .web-5 img{
-    width: 16rem;
+    width: 23rem;
   }
 
 .Portfolio .grid-container .web-container .web-6 img{
-    width: 16rem;
+    width: 23rem;
 }
 
 .Portfolio .grid-container .web-container .web-7 img{
-    width: 16rem;
+    width: 23rem;
 }
 .Portfolio .grid-container .web-container .web-8 img{
-    width: 16rem;
+    width: 23rem;
+}
+
+.Team .Team-text h1::after{
+    content: "";
+    width: 25%;
+    margin: auto;
+    display: block;
+    background-color: var(--main-color);
 }
 .Team .Team-text p{
-    width: 18rem;
-    font-size: 18px;
+    width: 25rem;
 }
   .Team .card-body{
     position: relative;
@@ -1462,29 +1475,23 @@ body{
   }
 
   .Team .card-body .card-box{
-    width: 22rem;
+    
+    width: 28rem;
    
   }
-  .Team .card-body .card-box h1{
-    font-size: 21px;
+
+  .Pricing .Pricing-text h1:after{
+    content: "";
+    width: 30%;
+    margin: auto;
+    display: block;
+    background-color: var(--main-color);
   }
 
-  .Team .card-body .card-box img{
-    width: 10rem;
-  }
-  .Team .card-body .card-box p{
-    width: 10rem;
-    font-size: 18px;
-  }
-
-  .Team .card-body .card-box i{
-   font-size: 20px;
-  }
   .Pricing .Pricing-text p{
-    width: 17rem;
+    width: 24rem;
     position: relative;
-    right: 25px;
-    font-size: 18px;
+    right: 5px;
   }
   .Pricing .card-1{
     display: grid;
@@ -1493,36 +1500,47 @@ body{
   }
 
   .Pricing .card-1 .card-2{
+    width: 23rem;
     position: relative;
-    right: 50px;
-    width: 20rem;
-    height: 30rem;
+   left: 5px;
+  
+  }
+
+  .FAQ .FAQ-text h1:after{
+    content: "";
+    width: 25%;
+    margin: auto;
+    display: block;
+    background-color: var(--main-color);
   }
 
   .FAQ .FAQ-text p{
-    width: 17rem;
-    font-size: 18px;
+    width: 24rem;
   }
 
 
   .assign #accordion-1{
-    width: 350px;
+    width: 480px;
     position: relative;
-    right: 80px;
+    right:28%;
+
   
   }
 
-  .assign #accordion-1 li label{
-    font-size: 17px;
-     width: 16rem;
-    
-  }
+ 
+.Contact .contact-text h1:after{
+    content: "";
+    width: 50%;
+    margin: auto;
+    display: block;
+    background-color: var(--main-color);
+
+}
 
   .Contact .contact-text p{
+    width: 24rem;
     position: relative;
-    right: 40px;
-    width: 18rem;
-    font-size: 18px;
+    right: 20px;
   }
 
   .Contact .sector{
@@ -1531,55 +1549,39 @@ body{
   }
 
   .Contact .sector .card-4{
+    width: 24rem;
     position: relative;
-    left: 3px;
-    width: 20rem;
+    left: 10px;
     
   }
 
   .Contact .sector .card-4 .card-5 p{
-    font-size: 18px;
-    width: 15rem;
+    width: 20rem;
   }
 
 
   .Contact .sector .outer .outer-align{
-    width: 20rem;
+    width: 24rem;
     position: relative;
-    left: 3px;
+    left: 10px;
    
   }
 
-  .reviews .review-text p{
-    font-size: 18px;
-  }
-
+ 
   .footer .sub-container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
-    left: 50px;
-}
-
-.footer .sub-container .sub h2{
-    font-size: 20px;
-}
-
-.footer .sub-container .sub .sub-align p{
-    width: 15rem;
-}
-
-.footer .sub-container .sub p{
-    font-size: 19px;
+    left: 15%;
 }
 
 .footer .sub-container .sub .sub-align-1 h1{
-    width: 20rem;
+    top:2px
 }
 
-.footer .sub-container .sub .sub-align-1 p{
-    width: 18rem;
+.footer .credit{
+    margin-top: 10%;
 }
 
 .footer .credit .column p{
@@ -1587,537 +1589,326 @@ body{
     position: relative;
     left: 15px;
 }
-}
 
-@media screen and (min-width:490px) and (max-width:570px)
-{
-.header .flex .navbar{
-    display: grid;
-    position: relative;
-    right: 25px;
-}
 
-.Home{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-}
-
-.Home .Home-text h1{
-    font-size: 2rem;
-    width: 20rem;
-}
-
-.Home .Home-text p{
- width:20rem;
-}
-
-.Home .Home-img img{
-    width: 26rem;
-}
-.images{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.images img{
-    width: 50%;
-    height: 50%;
- 
-}
-.About .container{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-  
-}
-.About .container .About-text h3{
-    width: 23rem;
-    position: relative;
-    left: 30px;
-} 
-.About .container .About-text h4{
-    width: 23rem;
-    position: relative;
-    left: 30px;
-}
-.About .container .About-word h3{
-    width: 23rem;
-    position: relative;
-    left: 30px;
-}
-
-.About .container .About-button{
-    position: relative;
-    left: 30px;
-
-}
-.Polices .sub-heading{
-    width: 24rem;
-    position: relative;
-    left: 25px;
-}
-.Polices .order{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-    position: relative;
-    left: 25px;
-}
-.order  #accordion{
-    width: 400px;
-    position: relative;
-    right: 10px;
-}
-.Polices .order .order-img img{
-    width: 22rem;
-}
-.ratio .progress{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
 }
 
 
-.ratio .progress .progress-img img{
-    width: 22rem;
-    position: relative;
-    left: 15px;
-}
+@media screen and  (max-width:768px){
+   nav{
+    padding: 0px 50px;
+   }
 
-  .ratio .progress .progress-text .skill-box {
-    width: 90%;
-    position: relative;
-    left: 15px;
-  }
+   .checkbtn{
+    display: block;
+   }
 
-.Services .card{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-    position: relative;
-    left: 10px;
-}
-.call-to-action {
-    background-size: cover;
-    background-position: center;
+   nav .logo h1{
+    font-size: 30px;
+   }
+
+   nav ul{
     width: 100%;
-}
-.call-to-action .box-container{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-}
-.call-to-action .box-container .box p{
-    width: 24rem;
-}
-.Portfolio .Portfolio-text .layer .out{
-    display: inline-block;
-    width: 15%;
-}
-.Portfolio .grid-container{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-    position: relative;
-    left: 25px;
-}
-.Portfolio .grid-container .app-container .app-2 img{
-    width: 23rem;
-}
-.Portfolio .grid-container .app-container .app-3 img{
-    width: 23rem;
-}
-.Portfolio .grid-container .app-container .app-4 img{
-    width: 23rem;
-}
-.Portfolio .grid-container .web-container .web-5 img{
+    height: 100vh;
+    background-color: var(--main-color);
+    position: fixed;
+    top: 75px;
+    left:-100%;
+    text-align: center;
+    transition: 0.4s ease;
+   }
+
+   nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height:15px;
+   }
+
+   #check:checked ~ ul{
+    left: 0;
+   }
+   
+    .Home{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+    }
+
+    .Home .Home-text{
+        width: 23rem;
+       margin-top: 45%;
+       margin-left: 10%;
+    }
+
+    .Home .Home-text h1{
+        font-size: 3rem;
+        padding: 10px 15px;
+    }
+    
+    .Home .Home-text p{
+        padding: 10px 15px;
+    }
+    
+
+    .Home .Home-img img{
+        width: 26rem;
+        position: relative;
+        right: 5px;
+    }
+ 
+    .images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images img{
+     width: 24rem;
+    }
+
+   
+    .About .heading h1{
+        width: 24rem;
+        margin-top: 40%;
+    }
+
+    .About .heading h1::after{
+        content: "";
+        width: 30%;
+        display: block;
+        margin: auto;
+        background-color: var(--main-color);
+    }
+    .About .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        position: relative;
+        right: 5px;
+        
+    }
+
+    .About .container .About-text h3{
+        width:27rem;
+    }
+
+    .About .container .About-text h4{
+        width: 26rem;
+    }
+
+    .About .container .About-word h3{
+        width: 26rem;
+    } 
+
+    .Polices .sub-heading{
+        width: 25rem;
+    }
+
+    .Polices .order{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+    }
+
+    .order #accordion{
+        width: 450px;
+        position: relative;
+        right: 28px;
+    }
+
+    .order #accordion .word p{
+        padding: 10px;
+    }
+
+    .Polices .order .order-img img{
+        width: 30rem;
+        position: relative;
+        right: 35px;
+    }
+
+ 
+
+    .ratio .progress{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ratio .progress .progress-img img{
+        width: 28rem;
+        position: relative;
+        
+    }
+
+    .Services .inner h1::after{
+        content: "";
+        width: 30%;
+        display: block;
+        margin: auto;
+        background-color: var(--main-color);
+    }
+
+    .Services .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: 5px;
+    }
+
+    .Services .card .card-text p{
+      width: 20rem;
+    }
+
+    .call-to-action .box-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        position: relative;
+        right: 10px;
+    }
+
+    .call-to-action .box-container .box p{
+        width: 25rem;
+    }
+    .Portfolio .Portfolio-text h1::after{
+        content: "";
+        width: 30%;
+        display: block;
+        margin: auto;
+        background-color: var(--main-color);
+    }
+    .Portfolio .Portfolio-text .layer .out{
+        display: inline-block;
+        width: 20%;
+    }
+    .Portfolio .grid-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        position: relative;
+        left: 15px;
+    }
+
+    .Portfolio .grid-container .app-container .app-2 img{
+        width: 23rem;
+    }
+
+    .Portfolio .grid-container .app-container .app-3 img{
+        width: 23rem;
+    }
+
+    
+    .Portfolio .grid-container .app-container .app-4 img{
+        width: 23rem;
+    }
+   .Portfolio .grid-container .web-container .web-5 img{
+    width: 22rem;
+   }
+
+   .Portfolio .grid-container .web-container .web-6 img{
+    width: 22rem;
+   }
+
+   .Portfolio .grid-container .web-container .web-7 img{
     width: 22rem;
 }
-.Portfolio .grid-container .web-container .web-6 img{
-    width: 22rem;
-}
-.Portfolio .grid-container .web-container .web-7 img{
-    width: 22rem;
-}
+
 .Portfolio .grid-container .web-container .web-8 img{
     width: 22rem;
 }
+
+.Team .Team-text h1::after{
+    content: "";
+    width: 25%;
+    display: block;
+    margin: auto;
+    background-color: var(--main-color);
+}
+
 .Team .card-body{
-   display: grid;
-   grid-template-columns: repeat(1,1fr);
-   align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
 }
+
+
+
 .Team .card-body .card-box{
-    width: 25rem;
+    width: 28.5rem;
+    position: relative;
+    right: 20px;
 }
-.Team .card-body .card-box img{
-    width: 12rem;
+
+.Pricing .Pricing-text h1::after{
+    content: "";
+    width: 30%;
+    display: block;
+    margin: auto;
+    background-color: var(--main-color);
+
 }
-.Team .card-body .card-box h1{
-    font-size: 20px;
-}
-.Team .card-body .card-box p{
-    font-size: 18px;
-    width: 12.5rem;
-}
-.Team .card-body .card-box i{
-    font-size: 25px;
-}
+
+
+
+
 .Pricing .card-1{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
-    position: relative;
-    left:15px ;
-}
-.assign #accordion-1{
-    width: 500px;
-    position: relative;
-    right: 30%;
-}
-.Contact .sector{
- display: flex;
- flex-direction: column;
- align-items: center;
- gap: 1rem;
-}
-.Contact .sector .card-4{
-    width: 27rem;
-    position: relative;
-    left: 10px;
+
 }
 
-.Contact .sector .outer{
+.Pricing .card-1 .card-2{
+    width: 23rem;
     position: relative;
-    left: 10px;
+    right: 10px;
+   
 }
+
+.FAQ .FAQ-text h1::after{
+    content: "";
+    width: 30%;
+    display: block;
+    margin: auto;
+    background-color: var(--main-color);
+
+
+}
+
+.assign #accordion-1{
+    position: relative;
+    right: 35%;
+    width: 500px;
+}
+
+.Contact .sector{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Contact .sector .card-4{
+    width: 27rem;
+}
+
+.Contact .sector .card-4 .card-5 p{
+    width: 22rem;
+}
+
 .Contact .sector .outer .outer-align{
     width: 27rem;
 }
+
 .footer .sub-container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     position: relative;
-    left: 85px;
-}
-.footer .sub-container .sub h1{
-    font-size: 21px;
-}
-.footer .sub-container .sub h2{
-    font-size: 20px;
-}
-
-.footer .sub-container .sub p{
-    font-size: 18px;
-}
-.footer .sub-container .sub .sub-align-1 p{
-    width: 25rem;
+    left: 80px;
 }
 
 
 }
+
  
-
-
-@media (min-width:950px) and (max-width:1025px){
-
-    .header .flex .navbar a{
-        margin-left: 2rem;
-    }
-    .About .container{
-        display: grid;
-        grid-template-columns: 30rem 30rem;
-        gap:1rem
-
-    }
-    .About .container .About-text h3{
-        width: 20rem;
-    }
-    .About .container .About-word h3{
-        width: 25rem;
-    }
-
-    .order #accordion{
-        position: relative;
-        right: 20px;
-    }
-
-    .Polices .order .order-img img{
-        width: 20rem;
-        height: 25rem;
-        position: relative;
-        right: 30px;
-    }
-
-    .ratio .progress .progress-img img{
-        width: 24rem;
-        height: 30rem;
-    }
-
-
-    .Services .card .card-text{
-        width: 27rem;
-
-    }
-
-    .Portfolio .grid-container{
-        display: grid;
-        grid-template-columns: 19rem 19rem 19rem;
-        gap:1.5rem;
-        align-items: center;
-        position: relative;
-        right: 25px;
-    }
-
-
-
-.Portfolio .grid-container .menu-container .menu img{
-    width: 19rem;
-    height: 38rem;
-    margin-bottom: 2rem;
-
-}
-
-.Portfolio .grid-container .menu-container .menu-1 img{
-    width: 19rem;
-    height: 46rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .app-container .app-2 img{
-    width: 18rem;
-    height: 22rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .app-container .app-3 img{
-    width: 18rem;
-    height: 33rem;
-    margin-bottom: 2rem;
-}
-
-
-.Portfolio .grid-container .app-container .app-4 img{
-    width: 18rem;
-    height: 22rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .web-container .web-5 img{
-    width:15rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-.Portfolio .grid-container .web-container .web-6 img{
-    width:15rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-
-.Portfolio .grid-container .web-container .web-7 img{
-    width:15rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-
-.Portfolio .grid-container .web-container .web-8 img{
-    width:15rem;
-    height: 17rem;
-    margin-bottom: 2rem;
-}
-
-    .Team .card-body{
-        display: grid;
-        grid-template-columns: 28rem 28rem;
-        align-items: center;
-        gap: 1.5rem;
-        position: relative;
-        right: 20px;
-    }
-
-    .Team .card-body .card-box{
-        width:28rem
-    }
-
-    .Pricing .card-1{
-        display: grid;
-        grid-template-columns:35% 35 35%;
-        gap: 1rem;
-        position: relative;
-        right: 40px;
-    }
-
-    .Pricing .card-1 .card-2{
-        width:18rem;
-        height:40rem;
-        padding: 10px 15px;
-    }
-
-    .assign #accordion-1{
-        position: relative;
-        right: 30px;
-    }
-    .Contact .sector{
-        display: flex;
-        align-items: center;
-        gap: 2.5rem;
-    }
-
-    .Contact .sector .card-4 .card-5{
-        width: 23rem;
-    }
-
-    .Contact .sector .outer .outer-align{
-        width: 27rem;
-    }
-
-    .footer .sub-container{
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .footer .sub-container .sub{
-        width: 15rem;
-    
-    }
-
-    .footer .sub-container .sub .sub-align{
-        position: relative;
-          bottom: 24px;
-    }
-   
-
-    .footer .sub-container .sub .sub-1{
-        display: flex;
-        width: 20rem;
-    }
-
-    .footer .sub-container .sub .sub-1 p{
-       font-size: 16px;
-
-    
-    }
-
-    .footer .sub-container .sub .sub-2 p{
-        font-size: 16px;
-    }
-
-    .footer .sub .sub-plot{
-        position: relative;
-        right: 60px;
-    }
-
-    .footer .sub-container .sub .sub-align-1{
-        position: relative;
-        right: 70px;
-    }
-
-    .footer .sub-container .sub .sub-align-1 h1{
-        width: 20rem;
-        position: relative;
-        bottom: 1px;
-        right: 17px;
-       
-    }
-
-    .footer .sub-container .sub .sub-align-1 p{
-        width:15rem;
-        font-size:17px;
-        position: relative;
-        top: 5px;
-    
-    }
-    .footer .sub-container .sub .sub-align-1 i{
-       position: relative;
-       top: 10px;
-        padding: 3px;
-    }
-}
-
-@media (min-width:1137px) and (max-width:1207px){
-
-.About .container{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap:1rem
-
-}
-.About .container .About-text h3{
-    width: 25rem;
-}
-.About .container .About-word h3{
-    width: 28rem;
-} 
-
-.Polices .order .order-img img{
-    position: relative;
-    right: 20px;
-    width: 30rem;
-}
-
-.ratio .progress .progress-img img{
-    width: 28rem;
-}
-
-.Portfolio .grid-container{
-    position: relative;
-    right: 20px;
-}
-.Team .card-body{
-    display: grid;
-    grid-template-columns: 35rem 35rem;
-}
-.Team .card-body .card-box{
-    width: 30rem;
-}
-
-.footer .sub-container .sub{
-    width: 15rem;
-}
-
-.footer .sub-container .sub-align h1{
-    position: relative;
-    top: 15px;
-}
-
-.footer .sub-container .sub-align p{
-    position: relative;
-    top: 15px;
-}
-
-.footer .sub-container .sub-1{
-    display: flex;
-    width: 20rem;
-}
-
-.footer .sub-container .sub .sub-align-1{
-    position: relative;
-    right: 25px;
-} 
-
-.footer .sub-container .sub .sub-align-1 h1{
-    position: relative;
-    bottom: 7px;
-}
-
-.footer .sub-container .sub .sub-align-1 p{
-    width: 20rem;
-    position: relative;
-    top: 1px;
-}
-.footer .sub-container .sub .sub-align-1 i{
-    position: relative;
-    top: 10px;
-}
-}
-
-
-
