@@ -2040,9 +2040,6 @@ nav ul li a{
 
   .Contact .sector .card-4{
     width: 23rem;
-    height: 35rem;
-    border-bottom: 3px solid var(--third-color);
-  
     
   }
 
@@ -2053,7 +2050,8 @@ nav ul li a{
 
   .Contact .sector .outer {
     width: 23rem;
-    height: 35rem;
+    height: 30rem;
+
     
   }
 
