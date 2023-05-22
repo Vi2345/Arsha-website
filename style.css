@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 ::selection{
     background-color: #ffe4c4;
@@ -13,17 +14,17 @@
 }
 
 :root{
-    --main-color:#327ee9;
+    --main-color:#1740798a;
     --primary-color:#000000;
     --secondary-color:#ffffff;
     --third-color:#87cfeb;
-    --h1-font-size:26px;
-    --h2-font-size:25px;
-    --h3-font-size:23px;
-    --h4-font-size:21px;
+    --h1-font-size:28px;
+    --main-font-size:20px;
+    --sub-heading-font-size:24px;
     --p-font-size:19px;
-    --a-font-size:18px;
-    --main-font-family:'Poppins', sans-serif;
+    --a-font-size:19px;
+    --main-font-family:'Josefin Sans', sans-serif;
+    --second-font-family:'Open Sans', sans-serif;;
 }
 
 
@@ -145,13 +146,15 @@ nav ul li a:hover{
     color: var(--secondary-color);
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.5rem;
 }
 
-.Home .Home-text p{
-    font-size: var(--p-font-size);
+.Home .Home-text h2{
+    font-size: var(--sub-heading-font-size);
+    font-family:var(--second-font-family);
+    font-weight:100;
     color: var(--secondary-color);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     line-height: 1.9;
 }
 
@@ -190,7 +193,8 @@ nav ul li a:hover{
   .images{
     display:flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
+    background-color:#e6e6fa;
    
   
 
@@ -198,10 +202,10 @@ nav ul li a:hover{
 }
 
   .images img{
-    width: 14%;
-    height: 14%;
+    width: 13%;
+    height: 13%;
     filter: grayscale(10);
-    padding: 10px 15px;
+    padding: 20px 25px;
 
   
 }
@@ -215,6 +219,7 @@ nav ul li a:hover{
  .About .heading h1{
     color: var(--main-color);
     font-size: var(--h1-font-size);
+    font-family: var(--second-font-family);
     font-weight: bold;
 }
 
@@ -225,6 +230,8 @@ nav ul li a:hover{
     margin: auto;
     display: block;
     background-color: var(--main-color);
+    position: relative;
+    top: 15px;
 }
 
 .About .container{
@@ -235,19 +242,20 @@ nav ul li a:hover{
  
 }
 
-.About .container .About-text h3{
+.About .container .About-text h2{
  color: var(--primary-color);
- font-size: var(--h3-font-size);
- font-weight:300;
+ font-size: var(--main-font-size);
+ font-family:var(--second-font-family) ;
+ font-weight:400;
  width: 40rem;
- margin-bottom: 2rem;
+ margin-bottom: 1rem;
 }
 
-.About .container .About-text h4{
+.About .container .About-text p{
     color: var(--primary-color);
-    font-size: var(--h4-font-size);
-    font-weight: 300;
-    line-height: 1.5;
+    font-size: var(--p-font-size);
+   font-family: var(--second-font-family);
+   font-weight: 400;
     width: 35rem;
 }
 
@@ -257,18 +265,21 @@ nav ul li a:hover{
     padding: 7px;
 }
 
-.About .container .About-word h3{
+.About .container .About-word h2{
     color: var(--primary-color);
- font-size: var(--h3-font-size);
- font-weight:300;
- width: 33rem;
- margin-bottom: 2.3rem;
+ font-size: var(--main-font-size);
+ font-family: var(--second-font-family);
+ font-weight: 400;
+ width: 35rem;
+ position: relative;
+ bottom:65px;
+
 
 }
 
 .About .container .About-button{
     padding: 10px 15px;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--third-color);
     color: var(--third-color);
     font-size: var(--a-font-size);
     text-align: center;
@@ -282,33 +293,41 @@ nav ul li a:hover{
 }
 .Polices .sub-heading{
     width: 40rem;
+    position: relative;
+    top: 70px;
 
 }
 
 .Polices .sub-heading h1{
-    font-size: var(--h1-font-size);
-    color:var(--third-color);
+    font-size: 30px;
+    color:var(--main-color);
+    margin-bottom: 1rem;
+    font-family: var(--second-font-family);
   
 }
 .Polices .sub-heading span{
-    color: var(--main-color);
+    color:#403394d0;
+    font-weight: bold;
+    font-family: var(--main-font-family);
 }
 .Polices .sub-heading p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
-.Polices .order{
+.Polices .order-container{
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     gap: 1.5rem;
 }
-.order #accordion{
-   margin: 100px 0;
+.Polices .order-container .order #accordion{
+    margin-top: 10px;
     width:600px;
 }
 
-.order #accordion li{
+ .Polices .order-container .order #accordion li{
     width: 100%;
     margin-bottom: 10px;
     background-color:var(--secondary-color);
@@ -316,41 +335,48 @@ nav ul li a:hover{
     border-radius: 4px;
 }
 
-.order #accordion li label{
+.Polices .order-container .order #accordion li label{
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    font-size:var(--p-font-size);
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+    font-size:var(--main-font-size);
+    font-family: var(--second-font-family);
     color: var(--third-color);
     transition: max-height 0.5s;
     
 }
 
-.order #accordion li label i{
-    font-size: 22px;
+.Polices .order-container .order #accordion li .word p{
+    font-size: 16px;
+    font-family: var(--second-font-family);
+    font-weight: 400;
+}
+
+.Polices .order-container .order #accordion li label i{
+    font-size:25px;
     color: var(--primary-color);
-    padding: 3px;
-    margin-bottom: 30px;
+    
   
    
 }
-.order #accordion li label + input[type='radio']{
+.Polices .order-container .order #accordion li label + input[type='radio']{
     display: none;
 }
-.order #accordion li .word{
+.Polices .order-container .order #accordion li .word{
     max-height: 0;
    overflow: hidden;
     transition: max-height 0.5s;
     line-height: 1.5;
 }
 
-.order #accordion li label + input[type='radio']:checked + .word{
+.Polices .order-container .order #accordion li label + input[type='radio']:checked + .word{
     max-height: 400px;
 }
 
-.Polices .order .order-img img{
+.Polices .order-container .vector img{
  width: 30rem;
  height: 35rem;
 }
@@ -373,14 +399,16 @@ nav ul li a:hover{
 }
 
 .ratio .progress .progress-text h1{
-    font-size: var(--h1-font-size);
-    line-height: 1.3;
+    font-size: 30px;
+    font-family: var(--second-font-family);
+    line-height: 1.2;
     color: var(--main-color);
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
 }
 
 .ratio .progress .progress-text p{
     font-size: var(--p-font-size);
+    font-family: var(--main-font-family);
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
@@ -393,6 +421,8 @@ nav ul li a:hover{
 .ratio .progress .progress-text .skill-box p{
     color: var(--main-color);
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: bold;
     letter-spacing: 1px;
     margin:0 0 10px;
 
@@ -405,7 +435,7 @@ nav ul li a:hover{
 }
 
 .ratio .progress .progress-text .skill-box .skill{
-    background-color:#faebd7;
+    background-color:#e6e6fa;
     padding: 2px;
     border-radius: 2px;
 
@@ -431,8 +461,9 @@ nav ul li a:hover{
 
 .Services .inner h1{
     font-size: var(--h1-font-size);
+    font-family: var(--second-font-family);
     color: var(--main-color);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   
 }
  
@@ -443,18 +474,22 @@ nav ul li a:hover{
     display: block;
     margin: auto;
     background-color: var(--main-color);
+    position: relative;
+    top: 15px;
 }
 
  .Services .inner p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
     color: var(--primary-color);
+    font-weight:400
  }
 
  .Services .card {
     position: relative;
-    display: flex;
+    display:flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 3rem;
     margin-top: 5%;
  
  }
@@ -464,7 +499,7 @@ nav ul li a:hover{
     background-color: var(--secondary-color);
     width: 25rem;
     height: 20rem;
-    padding: 10px;
+    padding: 10px 15px;
     box-shadow: 0px 10px 20px var(--primary-color);
  }
 
@@ -478,22 +513,26 @@ nav ul li a:hover{
  
  .Services .card .card-text h1{
     font-size: var(--h1-font-size);
+    font-family: var(--second-font-family);
+    font-weight: bold;
     color: var(--main-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
  }
 
  .Services .card .card-text p{
     color: var(--primary-color);
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
  
  }
 
  .call-to-action{
-    background-image: url("images/cta-bg.jpg");
+    background-image:linear-gradient(#00000091,#00000091),url("images/cta-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 4rem;
+    padding: 7rem;
     margin-top: 10%;
  }
 .call-to-action .box-container{
@@ -504,12 +543,16 @@ nav ul li a:hover{
 }
 
 .call-to-action .box-container .box h2{
-    font-size: var(--h2-font-size);
+    font-size: var(--sub-heading-font-size);
+    font-family: var(--main-font-family);
     color: var(--secondary-color);
+    text-transform: uppercase;
 }
 
 .call-to-action .box-container .box p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 500;
     color: var(--secondary-color);
     width: 45rem;
 }
@@ -532,6 +575,7 @@ nav ul li a:hover{
 }
 .Portfolio .Portfolio-text h1{
     font-size: var(--h1-font-size);
+    font-family: var(--second-font-family);
     color: var(--main-color);
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -543,11 +587,15 @@ nav ul li a:hover{
     height: 3px;
     margin: auto;
     display: block;
+    position: relative;
+    top: 15px;
     background-color: var(--main-color);
 }
 
 .Portfolio .Portfolio-text p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
     color: var(--primary-color);
     margin-bottom: 2rem;
 }
@@ -562,12 +610,14 @@ nav ul li a:hover{
     width:7%;
     border-radius: 50px;
     font-size: var(--a-font-size);
+    font-family: var(--second-font-family);
     background-color: var(--third-color);
     color: var(--secondary-color);
 }
 
 .Portfolio .Portfolio-text .layer a{
     font-size: var(--a-font-size);
+    font-family: var(--second-font-family);
     color:  var(--primary-color);
 }
 
@@ -607,7 +657,7 @@ nav ul li a:hover{
 
 .Portfolio .grid-container .app-container .app-4 img{
     width: 21rem;
-    height: 22rem;
+    height: 24rem;
     margin-bottom: 2rem;
 }
 
@@ -649,6 +699,7 @@ nav ul li a:hover{
 .Team .Team-text h1{
     font-size: var(--h1-font-size);
     color: var(--main-color);
+    font-family: var(--second-font-family);
     text-transform: uppercase;
     margin-bottom: 2rem; 
 }
@@ -660,10 +711,14 @@ nav ul li a:hover{
     margin: auto;
     display: block;
     background-color: var(--main-color);
+    position: relative;
+    top: 15px;
 
 }
 .Team .Team-text p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
     color: var(--primary-color);
     margin-bottom: 2rem;
 
@@ -682,7 +737,7 @@ nav ul li a:hover{
     text-align: center;
     background-color: var(--secondary-color);
     width: 32rem;
-    height: 32rem;
+    height: 30rem;
    
    
 
@@ -698,20 +753,12 @@ nav ul li a:hover{
 }
  .Team .card-body .card-box h1{
     font-size: var(--h1-font-size);
+    font-family: var(--main-font-family);
     color:var(--main-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     position: relative;
     left: 25%;
     bottom: 40%;
- }
- .Team .card-body .card-box p{
-    font-size: var(--p-font-size);
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    width: 15rem;
-    position: relative;
-    bottom: 40%;
-    left: 50%;
  }
 
  .Team .card-body .card-box h1::after{
@@ -721,14 +768,28 @@ nav ul li a:hover{
     margin: auto;
     display: block;
     border-top: 1px solid var(--primary-color);
+    position: relative;
+    top: 10px;
  }
+
+ .Team .card-body .card-box p{
+    font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    width: 15rem;
+    position: relative;
+    bottom: 40%;
+    left: 50%;
+ }
+
 
  .Team .card-body .card-box i{
     position: relative;
     bottom: 40%;
     left: 25%;
     padding: 10px;
-    font-size: 35px;
+    font-size: 25px;
     background-color: #e6e6fa;
     border-radius: 50%;
  
@@ -745,6 +806,7 @@ nav ul li a:hover{
 
  .Pricing .Pricing-text h1{
     font-size: var(--h1-font-size);
+    font-family: var(--second-font-family);
     color: var(--main-color);
     text-transform: uppercase;
     margin-bottom: 1rem; 
@@ -753,6 +815,8 @@ nav ul li a:hover{
     content: "";
     width: 10%;
     height: 3px;
+    position: relative;
+    top: 15px;
     margin: auto;
     display: block;
     background-color: var(--main-color)
@@ -760,6 +824,8 @@ nav ul li a:hover{
 
  .Pricing .Pricing-text p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
     color: var(--primary-color);
     margin-bottom: 2rem;
 
@@ -780,18 +846,22 @@ nav ul li a:hover{
     padding: 10px 10px;
     background-color: var(--secondary-color);
     box-shadow: 0px 10px 20px var(--primary-color);
+    border-top: 4px solid var(--third-color);
  }
 
 
 
  .Pricing .card-1 .card-2 h1{
-    font-size: var(--h1-font-size);
+    font-size: var(--main-font-size);
+    font-family: var(--second-font-family);
     color: var(--main-color);
     margin-bottom: 1rem;
  }
 
  .Pricing .card-1 .card-2  h2{
-    color: var(--main-color);
+    font-size: var(--main-font-size);
+    font-family: var(--second-font-family);
+    color:var(--main-color);
     font-size: 45px;
     position: relative;
     bottom: 30px;
@@ -799,7 +869,8 @@ nav ul li a:hover{
     
 }
 .Pricing .card-1 .card-2 h3{
-    font-size: var(--h3-font-size);
+    font-size: var(--sub-heading-font-size);
+    font-family: var(--second-font-family);
     color: var(--third-color);
     position: relative;
     bottom: 35px;
@@ -817,7 +888,9 @@ nav ul li a:hover{
 }
 
 .Pricing .card-1 .card-2 .center p{
-    font-size: 18px;
+    font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 300;
     color:var(--primary-color);
 
 }
@@ -829,14 +902,14 @@ nav ul li a:hover{
     filter: grayscale(10);
 }
 
-.Pricing .card-1 .card-2 .layer {
+.Pricing .card-1 .card-2 .layer a {
     display: inline-block;
     padding: 10px 15px;
     text-align: center;
     font-size: var(--a-font-size);
     margin-top: 6%;
-    border: 2px solid var(--main-color);
-    color: var(--third-color);
+    border: 2px solid var(--third-color);
+    color:var(--third-color);
     border-radius: 50px;
 }
 
@@ -846,7 +919,7 @@ nav ul li a:hover{
         text-align: center;
         font-size: var(--a-font-size);
         margin-top: 5%;
-        background-color: var(--main-color);
+        background-color: var(--third-color);
         color: var(--secondary-color);
         border-radius: 50px;
 
@@ -855,6 +928,7 @@ nav ul li a:hover{
 .FAQ{
     background-color: #f0f8ff9c;
     margin-top: 10%;
+    padding: 3rem;
 }
 
 .FAQ .FAQ-text{
@@ -863,26 +937,31 @@ nav ul li a:hover{
 
 .FAQ .FAQ-text h1{
     font-size: var(--h1-font-size);
+    font-family: var(--second-font-family);
     color: var(--main-color);
     text-transform: uppercase;
-    margin-bottom: 1rem;  
 }
 
 
 .FAQ .FAQ-text h1::after{
     content: "";
-    width: 15%;
+    width: 20%;
     height: 3px;
     margin: auto;
     display: block;
-    background-color: var(--main-color)
+    background-color: var(--main-color);
+    position: relative;
+    top: 10px;
 
 }
 
 .FAQ .FAQ-text p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 1rem;
 
 
 }
@@ -891,7 +970,7 @@ nav ul li a:hover{
     margin-left: 15%;
 }
 .assign #accordion-1{
- 
+     margin-top: 10px;
      width:700px;
      padding: 1rem 2rem;
   
@@ -912,8 +991,9 @@ nav ul li a:hover{
      display: flex;
      align-items: center;
      justify-content: center;
-     gap: 3rem;
-     font-size:var(--p-font-size);
+     gap: 2rem;
+     font-size:var(--main-font-size);
+     font-family: var(--second-font-family);
      color: var(--third-color);
      transition: max-height 0.5s;
      
@@ -921,7 +1001,10 @@ nav ul li a:hover{
 
  .assign #accordion-1 li .part p{
     padding: 15px 20px;
-    margin-left: 10%;
+    margin-left: 7%;
+    font-family: var(--second-font-family);
+    font-size: var(--p-font-size);
+    font-weight: 400;
 
  }
  .assign #accordion-1 li label i{
@@ -963,15 +1046,18 @@ nav ul li a:hover{
  }
  .Contact .contact-text h1{
     font-size: var(--h1-font-size);
+    font-family: var(--second-font-family);
     color: var(--main-color);
     text-transform: uppercase;
-    margin-bottom: 2rem;  
+    margin-bottom: 1rem;  
  }
 
  .Contact .contact-text h1::after{
     content: "";
     width: 15%;
     height: 3px;
+    position: relative;
+    top: 15px;
     margin: auto;
     display: block;
     background-color: var(--main-color)
@@ -980,46 +1066,53 @@ nav ul li a:hover{
  .Contact .contact-text p{
     font-size: var(--p-font-size);
     color: var(--primary-color);
+    font-family: var(--second-font-family);
+    font-weight: 400;
+    margin-top: 10px;
 
  }
 
  .Contact .sector{
-    display: flex;
-    gap: 2.5rem;
+    display:grid;
+    grid-template-columns: auto auto;
     align-items: center;
+    gap: 2rem;
+    margin-top: 5%;
  }
 
    
 
  .Contact .sector .card-4{
   
-    width: 35rem;
-    height: 35rem;
-    border-top: 3px solid var(--main-color);
+    width: 500px;
+    height: 100%;
+    border-bottom: 3px solid var(--third-color);
+
 
  }
  .Contact .sector  .card-4 .card-5{
-    position: relative;
+
     background-color: var(--secondary-color);
     padding: 15px 20px;
-
+   
    
  }
 
  .Contact .sector .card-4 .card-5 i{
-    position: relative;
     font-size: 40px;
     top: 15px;
     padding: 10px;
     border-radius: 50%;
-    color: var(--main-color);
+    color: var(--third-color);
     background-color: #e6e6fa;
   
 }
 .Contact .sector .card-4 .card-5 p{
-    position: relative;
+   position: relative;
     color: var(--primary-color);
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
     bottom: 50px;
     left: 65px;
     
@@ -1030,55 +1123,59 @@ nav ul li a:hover{
 
 .Contact .sector .card-4 .card-5 .line {
     color: var(--main-color);
+    font-family: var(--second-font-family);
+    font-weight: bold;
     font-size: 30px;
 }
 
+
+
 .Contact .sector .outer{
-    position: relative;
-    
-}
-
-.Contact .sector .outer .outer-align{
-    position: relative;
-    width: 35rem;
-    height: 35rem;
+    width: 500px;
+    height:100%;
     background-color: var(--secondary-color);
-    padding: 15px 20px; 
-    border-top: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--third-color);
 
 }
 
 
-.Contact .sector .outer .outer-align .outer-1 label{
-    font-size:23px;
+.Contact .sector .outer  .outer-1 label{
+    font-size:var(--main-font-size);
+    font-family: var(--second-font-family);
     color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    margin-left: 5px;
 }
 
 
-.Contact .sector .outer .outer-align .outer-1 input{
-    width: 100%;
-    padding:1rem;
+.Contact .sector .outer .outer-1 input{
+    width: 90%;
+    padding: 10px 15px;
+    margin-bottom: 1.5rem;
+    margin-left: 5px;
    
 }
 
 
-.Contact .sector .outer .outer-align .outer-1 textarea{
-    width: 100%;
-    padding: 0.5rem;
+.Contact .sector .outer .outer-1 textarea{
+    width: 90%;
+    padding: 10px 15px;
+    margin-bottom: 1.5rem;
+    margin-left: 5px;
 }
 
-.Contact .sector .outer .outer-align .text-center {
+.Contact .sector .outer .text-center {
     text-align: center;
 }
 
-.Contact .sector .outer .outer-align .text-center .outer-button{
+.Contact .sector .outer  .text-center .outer-button{
     padding: 10px 15px;
-    background-color:var(--main-color);
+    background-color:var(--third-color);
     color: var(--secondary-color);
     font-size: var(--a-font-size);
     border-radius: 50px;
     position: relative;
-    top:25px;
+    top:10px;
 }
 
 .reviews{
@@ -1090,7 +1187,7 @@ nav ul li a:hover{
     text-align: center;
 }
 .reviews .review-text h1{
-    font-size: var(--h1-font-size);
+    font-size: var(--main-font-size);
     color: var(--main-color);
     text-transform: uppercase;
     margin-bottom: 0.5rem;  
@@ -1098,6 +1195,8 @@ nav ul li a:hover{
 
 .reviews .review-text p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
     color: var(--primary-color);
 }
 
@@ -1108,21 +1207,22 @@ nav ul li a:hover{
 
 .reviews .form input{
     width: 50%;
-    height: 40px;
+    height: 35px;
     border-radius: 50px;
-    background-color:#deb887;
+    background-color:#ffffffec;
     border: none;
 }
 
 .reviews .form .review-button{
-    display: inline-block;
-    padding: 10px 10px;
-    background-color: var(--main-color);
+     display:inline-block ;
+    padding: 15px 20px;
+    background-color: var(--third-color);
     color: var(--secondary-color);
     font-size: var(--a-font-size);
     border-radius: 50px;
     position: relative;
     right: 8px;
+    text-align: center;
 }
 
 .footer{
@@ -1134,34 +1234,59 @@ nav ul li a:hover{
     display: grid;
     grid-template-columns: auto auto auto auto;
     align-items: center;
-    gap: 1.5rem;
-}
-.footer .sub-container .sub h1{
-    font-size: var(--h1-font-size);
-    color:var(--main-color);
-    margin-bottom: 1rem;
+    gap: 2rem;
+    padding: 15px 20px;
+    position: relative;
+    left: 10px;
 }
 
+
 .footer .sub-container .sub h2{
-    font-size: 20px;
-    color: var(--primary-color);
-    font-weight: 300;
+    font-size: var(--sub-heading-font-size);
+    font-family: var(--second-font-family);
+    color: var(--main-color);
     line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 .footer .sub-container .sub i{
     padding: 5px;
-    color:var(--main-color)
+    color:var(--third-color)
 }
-
+.footer .sub-container .sub .sub-align h2{
+    position: relative;
+    top: 7px;
+}
 .footer .sub-container .sub .sub-1{
     display: flex;
     flex-direction: row;
   
     
 }
+
+.footer .sub-container .sub .subletter p{
+
+    color:  var(--primary-color);
+    font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
+
+}
+
+.footer .sub-container .sub .sub-plot p{
+
+    color:  var(--primary-color);
+    font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
+
+}
 .footer .sub-container .sub .sub-1 p{
     color:  var(--primary-color);
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
+  
 
 }
 
@@ -1173,33 +1298,42 @@ nav ul li a:hover{
 .footer .sub-container .sub .sub-2 p{
     color: var(--primary-color);
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
 }
 
 
 
 .footer .sub-container .sub .sub-align{
     position: relative;
-    bottom: 35px;
+    bottom: 30px;
 }
 
 .footer .sub-container .sub .sub-align p{
     color: var(--primary-color);
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
+    width: 15rem;
   
 }
 
 
 
-.footer .sub-container .sub .sub-align-1 h1{
+.footer .sub-container .sub .sub-align-1 h2{
     width: 22rem;
     position: relative;
-    bottom: 1px;
+    bottom: auto;
+    font-weight: bold;
+
 }
 
 
 .footer .sub-container .sub .sub-align-1 p{
     color:  var(--primary-color);
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
+    font-weight: 400;
     position: relative;
     top: 1px;
     width: 20rem;
@@ -1211,8 +1345,9 @@ nav ul li a:hover{
     position: relative;
     top: 10px;
     border-radius: 50%;
-    background-color: #f0f8ff9c;
-    padding: 5px;
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    padding: 10px;
 }
 
 .credit{
@@ -1229,8 +1364,348 @@ nav ul li a:hover{
 
 .credit .column p{
     font-size: var(--p-font-size);
+    font-family: var(--second-font-family);
     color: var(--primary-color);
+    font-weight: 500;
 }
+
+
+
+
+@media screen and (max-width:768px){
+    nav{
+     padding: 0px 50px;
+    }
+ 
+    .checkbtn{
+     display: block;
+    }
+ 
+    nav .logo h1{
+     font-size: 30px;
+    }
+ 
+    nav ul{
+     width: 100%;
+     height: 100vh;
+     background-color: var(--main-color);
+     position: fixed;
+     top: 75px;
+     left:-100%;
+     text-align: center;
+     transition: 0.4s ease;
+    }
+ 
+    nav ul li{
+     display: block;
+     margin: 50px 0;
+     line-height:15px;
+    }
+ 
+    #check:checked ~ ul{
+     left: 0;
+    }
+    
+     .Home{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+         align-items: center;
+     }
+ 
+     .Home .Home-text{
+         width: 23rem;
+        margin-top: 45%;
+        margin-left: 5%;
+     }
+ 
+     .Home .Home-text h1{
+         font-size: 3rem;
+         padding: 10px 15px;
+         position: relative;
+         right: 12px;
+     }
+     
+     .Home .Home-text p{
+         padding: 10px 15px;
+     }
+        
+     
+ 
+     .Home .Home-img img{
+         width: 26rem;
+         position: relative;
+         right: 5px;
+     }
+  
+     .images{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     .images img{
+      width: 20rem;
+     }
+ 
+    
+     .About .heading h1{
+         width: 28rem;
+         margin-top: 40%;
+     }
+ 
+     .About .heading h1::after{
+         content: "";
+         width: 30%;
+         display: block;
+         margin: auto;
+         background-color: var(--main-color);
+     }
+     .About .container{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+         align-items: center;
+         position: relative;
+         right: 10px;
+         
+     }
+ 
+     .About .container .About-text h2{
+         width:28rem;
+     }
+ 
+     .About .container .About-text p{
+         width: 28rem;
+     }
+ 
+     .About .container .About-word h2{
+         width: 28rem;
+         margin-top: 10%;
+     } 
+ 
+     .Polices .sub-heading{
+         width: 25rem;
+     }
+ 
+     .Polices .order-container{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+         align-items: center;
+         gap: 3rem;
+     }
+ 
+     .Polices .order-container .order #accordion{
+       
+         width: 400px;
+         position: relative;
+         top: 70px;
+         right: 10px;
+     }
+ 
+     .Polices .order-container .order #accordion .word p{
+         padding: 5px;
+     }
+ 
+     .Polices .order-container .vector img{
+         width: 28rem;
+         position: relative;
+         right: 35px;
+     }
+ 
+  
+ 
+     .ratio .progress{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     .ratio .progress .progress-img img{
+         width: 28rem;
+         position: relative;
+         
+     }
+ 
+     .Services .inner h1::after{
+         content: "";
+         width: 30%;
+         display: block;
+         margin: auto;
+         background-color: var(--main-color);
+     }
+ 
+     .Services .card{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         position: relative;
+         left: 5px;
+     }
+ 
+     .Services .card .card-text p{
+       width: 20rem;
+     }
+ 
+     .call-to-action .box-container{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+         align-items: center;
+         position: relative;
+         right: 55px;
+     }
+ 
+     .call-to-action .box-container .box p{
+         width: 25rem;
+     }
+     .Portfolio .Portfolio-text h1::after{
+         content: "";
+         width: 30%;
+         display: block;
+         margin: auto;
+         background-color: var(--main-color);
+     }
+     .Portfolio .Portfolio-text .layer .out{
+         display: inline-block;
+         width: 20%;
+     }
+     .Portfolio .grid-container{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+         align-items: center;
+         position: relative;
+         left: 15px;
+     }
+ 
+     .Portfolio .grid-container .app-container .app-2 img{
+         width: 23rem;
+     }
+ 
+     .Portfolio .grid-container .app-container .app-3 img{
+         width: 23rem;
+     }
+ 
+     
+     .Portfolio .grid-container .app-container .app-4 img{
+         width: 23rem;
+     }
+    .Portfolio .grid-container .web-container .web-5 img{
+     width: 22rem;
+    }
+ 
+    .Portfolio .grid-container .web-container .web-6 img{
+     width: 22rem;
+    }
+ 
+    .Portfolio .grid-container .web-container .web-7 img{
+     width: 22rem;
+ }
+ 
+ .Portfolio .grid-container .web-container .web-8 img{
+     width: 22rem;
+ }
+ 
+ .Team .Team-text h1::after{
+     content: "";
+     width: 25%;
+     display: block;
+     margin: auto;
+     background-color: var(--main-color);
+ }
+ 
+ .Team .card-body{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     align-items: center;
+ }
+ 
+ 
+ 
+ .Team .card-body .card-box{
+     width: 28.5rem;
+     position: relative;
+     right: 20px;
+ }
+ 
+ .Pricing .Pricing-text h1::after{
+     content: "";
+     width: 30%;
+     display: block;
+     margin: auto;
+     background-color: var(--main-color);
+ 
+ }
+ 
+ 
+ 
+ 
+ .Pricing .card-1{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     align-items: center;
+ 
+ }
+ 
+ .Pricing .card-1 .card-2{
+     width: 23rem;
+     position: relative;
+     right: 10px;
+    
+ }
+ 
+ .FAQ .FAQ-text h1::after{
+     content: "";
+     width: 30%;
+     display: block;
+     margin: auto;
+     background-color: var(--main-color);
+ 
+ 
+ }
+ 
+ .assign #accordion-1{
+     position: relative;
+     right: 35%;
+     width: 500px;
+ }
+
+ .assign #accordion-1 label{
+    width: 25rem;
+ }
+ 
+ .Contact .sector{
+     display:grid;
+     grid-template-columns: repeat(1,1fr);
+     align-items: center;
+     position: relative;
+     right: 10px;
+ }
+ 
+ .Contact .sector .card-4{
+     width: 23rem;
+   
+    
+ }
+ 
+ .Contact .sector .card-4 .card-5 p{
+     width: 20rem;
+ }
+ 
+ .Contact .sector .outer{
+     width: 23rem;
+     height: 30rem;
+ 
+ }
+
+
+ .footer .sub-container{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     align-items: center;
+     position: relative;
+     left: 80px;
+ }
+ 
+ 
+ }
 
 @media screen and (max-width:480px)
 {
@@ -1274,27 +1749,33 @@ nav ul li a{
     width: 15rem;
    
   }
+  .About .heading{
+    text-align: center;
+    position: relative;
+    right: 15px;
+  }
  
   .About .container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    gap: 3rem;
+    position: relative;
+    left: 10px;
     
   }
 
-  .About .container .About-text h3{
-    width: 10rem;
+  .About .container .About-text h2{
+    width: 25rem;
   }
 
-  .About .container .About-text h4{
+  .About .container .About-text p{
     width: 25rem;
-    position: relative;
-    left: 10px;
+   
   }
-  .About .container .About-word h3{
+  .About .container .About-word h2{
    width: 24rem;
-   position: relative;
-   left: 10px;
+ 
   }
   .About .container .About-button{
   position: relative;
@@ -1310,18 +1791,19 @@ nav ul li a{
     position: relative;
     left: 15px;
   }
-  .Polices .order{
+  .Polices .order-container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    gap: 3rem;
   }
-
-  .order #accordion{
-    width: 400px;
+  
+  .Polices .order-container .order #accordion{
     position: relative;
-     right: 10px;
+    left: 8px;
   }
-  .Polices .order .order-img img{
+  
+  .Polices .order .vector img{
     width: 25rem;
 
   }
@@ -1375,8 +1857,8 @@ nav ul li a{
   }
   .Services .card .card-text{
     position: relative;
-    left: 7px;
-    width: 27rem;
+    left: 8px;
+    width: 24rem;
   }
   .call-to-action{
     background-position: center;
@@ -1417,44 +1899,44 @@ nav ul li a{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
-    position: relative;
-    left: 5px;
+
+    
     
   }
 
   .Portfolio .grid-container .menu-container .menu img{
-    width: 25rem;
+    width: 23rem;
   }
 
   .Portfolio .grid-container .menu-container .menu-1 img{
-    width: 25rem;
+    width: 23rem;
   }
 
   .Portfolio .grid-container .app-container .app-2 img{
-    width: 24rem;
+    width: 22rem;
   }
 
   .Portfolio .grid-container .app-container .app-3 img{
-    width: 24rem;
+    width: 22rem;
   }
 
   .Portfolio .grid-container .app-container .app-4 img{
-    width: 24rem;
+    width: 22rem;
   }
 
   .Portfolio .grid-container .web-container .web-5 img{
-    width: 23rem;
+    width: 21rem;
   }
 
 .Portfolio .grid-container .web-container .web-6 img{
-    width: 23rem;
+    width: 21rem;
 }
 
 .Portfolio .grid-container .web-container .web-7 img{
-    width: 23rem;
+    width: 21rem;
 }
 .Portfolio .grid-container .web-container .web-8 img{
-    width: 23rem;
+    width: 21rem;
 }
 
 .Team .Team-text h1::after{
@@ -1468,16 +1950,20 @@ nav ul li a{
     width: 25rem;
 }
   .Team .card-body{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   align-items: center;
+   gap: 3rem;
   }
 
   .Team .card-body .card-box{
     
     width: 28rem;
    
+  }
+
+  .Team .card-body .card-box img{
+    width: 12rem;
   }
 
   .Pricing .Pricing-text h1:after{
@@ -1491,12 +1977,14 @@ nav ul li a{
   .Pricing .Pricing-text p{
     width: 24rem;
     position: relative;
-    right: 5px;
+    right: 15px;
   }
   .Pricing .card-1{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    position: relative;
+    right: 13px;
   }
 
   .Pricing .card-1 .card-2{
@@ -1522,7 +2010,7 @@ nav ul li a{
   .assign #accordion-1{
     width: 480px;
     position: relative;
-    right:28%;
+    right:32%;
 
   
   }
@@ -1540,18 +2028,21 @@ nav ul li a{
   .Contact .contact-text p{
     width: 24rem;
     position: relative;
-    right: 20px;
+    right: 25px;
   }
 
   .Contact .sector{
-    display:flex;
-    flex-direction: column;
+    display:grid;
+   grid-template-columns: repeat(1,1fr);
+   align-items: center;
+   gap: 3rem;
   }
 
   .Contact .sector .card-4{
-    width: 24rem;
-    position: relative;
-    left: 10px;
+    width: 23rem;
+    height: 35rem;
+    border-bottom: 3px solid var(--third-color);
+  
     
   }
 
@@ -1560,11 +2051,10 @@ nav ul li a{
   }
 
 
-  .Contact .sector .outer .outer-align{
-    width: 24rem;
-    position: relative;
-    left: 10px;
-   
+  .Contact .sector .outer {
+    width: 23rem;
+    height: 35rem;
+    
   }
 
  
@@ -1576,339 +2066,12 @@ nav ul li a{
     left: 15%;
 }
 
-.footer .sub-container .sub .sub-align-1 h1{
-    top:2px
-}
 
-.footer .credit{
-    margin-top: 10%;
-}
 
-.footer .credit .column p{
-    font-size: 18px;
-    position: relative;
-    left: 15px;
-}
 
 
 }
 
 
-@media screen and  (max-width:768px){
-   nav{
-    padding: 0px 50px;
-   }
-
-   .checkbtn{
-    display: block;
-   }
-
-   nav .logo h1{
-    font-size: 30px;
-   }
-
-   nav ul{
-    width: 100%;
-    height: 100vh;
-    background-color: var(--main-color);
-    position: fixed;
-    top: 75px;
-    left:-100%;
-    text-align: center;
-    transition: 0.4s ease;
-   }
-
-   nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height:15px;
-   }
-
-   #check:checked ~ ul{
-    left: 0;
-   }
-   
-    .Home{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        align-items: center;
-    }
-
-    .Home .Home-text{
-        width: 23rem;
-       margin-top: 45%;
-       margin-left: 10%;
-    }
-
-    .Home .Home-text h1{
-        font-size: 3rem;
-        padding: 10px 15px;
-    }
-    
-    .Home .Home-text p{
-        padding: 10px 15px;
-    }
-    
-
-    .Home .Home-img img{
-        width: 26rem;
-        position: relative;
-        right: 5px;
-    }
- 
-    .images{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .images img{
-     width: 24rem;
-    }
-
-   
-    .About .heading h1{
-        width: 24rem;
-        margin-top: 40%;
-    }
-
-    .About .heading h1::after{
-        content: "";
-        width: 30%;
-        display: block;
-        margin: auto;
-        background-color: var(--main-color);
-    }
-    .About .container{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        align-items: center;
-        position: relative;
-        right: 5px;
-        
-    }
-
-    .About .container .About-text h3{
-        width:27rem;
-    }
-
-    .About .container .About-text h4{
-        width: 26rem;
-    }
-
-    .About .container .About-word h3{
-        width: 26rem;
-    } 
-
-    .Polices .sub-heading{
-        width: 25rem;
-    }
-
-    .Polices .order{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        align-items: center;
-    }
-
-    .order #accordion{
-        width: 450px;
-        position: relative;
-        right: 28px;
-    }
-
-    .order #accordion .word p{
-        padding: 10px;
-    }
-
-    .Polices .order .order-img img{
-        width: 30rem;
-        position: relative;
-        right: 35px;
-    }
-
- 
-
-    .ratio .progress{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .ratio .progress .progress-img img{
-        width: 28rem;
-        position: relative;
-        
-    }
-
-    .Services .inner h1::after{
-        content: "";
-        width: 30%;
-        display: block;
-        margin: auto;
-        background-color: var(--main-color);
-    }
-
-    .Services .card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        left: 5px;
-    }
-
-    .Services .card .card-text p{
-      width: 20rem;
-    }
-
-    .call-to-action .box-container{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        align-items: center;
-        position: relative;
-        right: 10px;
-    }
-
-    .call-to-action .box-container .box p{
-        width: 25rem;
-    }
-    .Portfolio .Portfolio-text h1::after{
-        content: "";
-        width: 30%;
-        display: block;
-        margin: auto;
-        background-color: var(--main-color);
-    }
-    .Portfolio .Portfolio-text .layer .out{
-        display: inline-block;
-        width: 20%;
-    }
-    .Portfolio .grid-container{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        align-items: center;
-        position: relative;
-        left: 15px;
-    }
-
-    .Portfolio .grid-container .app-container .app-2 img{
-        width: 23rem;
-    }
-
-    .Portfolio .grid-container .app-container .app-3 img{
-        width: 23rem;
-    }
-
-    
-    .Portfolio .grid-container .app-container .app-4 img{
-        width: 23rem;
-    }
-   .Portfolio .grid-container .web-container .web-5 img{
-    width: 22rem;
-   }
-
-   .Portfolio .grid-container .web-container .web-6 img{
-    width: 22rem;
-   }
-
-   .Portfolio .grid-container .web-container .web-7 img{
-    width: 22rem;
-}
-
-.Portfolio .grid-container .web-container .web-8 img{
-    width: 22rem;
-}
-
-.Team .Team-text h1::after{
-    content: "";
-    width: 25%;
-    display: block;
-    margin: auto;
-    background-color: var(--main-color);
-}
-
-.Team .card-body{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-}
-
-
-
-.Team .card-body .card-box{
-    width: 28.5rem;
-    position: relative;
-    right: 20px;
-}
-
-.Pricing .Pricing-text h1::after{
-    content: "";
-    width: 30%;
-    display: block;
-    margin: auto;
-    background-color: var(--main-color);
-
-}
-
-
-
-
-.Pricing .card-1{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-
-}
-
-.Pricing .card-1 .card-2{
-    width: 23rem;
-    position: relative;
-    right: 10px;
-   
-}
-
-.FAQ .FAQ-text h1::after{
-    content: "";
-    width: 30%;
-    display: block;
-    margin: auto;
-    background-color: var(--main-color);
-
-
-}
-
-.assign #accordion-1{
-    position: relative;
-    right: 35%;
-    width: 500px;
-}
-
-.Contact .sector{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.Contact .sector .card-4{
-    width: 27rem;
-}
-
-.Contact .sector .card-4 .card-5 p{
-    width: 22rem;
-}
-
-.Contact .sector .outer .outer-align{
-    width: 27rem;
-}
-
-.footer .sub-container{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-    position: relative;
-    left: 80px;
-}
-
-
-}
 
  
